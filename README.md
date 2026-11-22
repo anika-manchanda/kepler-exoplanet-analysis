@@ -1,4 +1,16 @@
-Findings:
+
+**Data:**
+
+NASA Kepler KOI table (2017 snapshot, from Kaggle): https://www.kaggle.com/datasets/nasa/kepler-exoplanet-search-results
+NASA’s current KOI table: https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative
+Files:
+
+Kepler_Analysis.ipynb. To run it, upload cumulative.csv and nasa_now.csv.
+
+License: CC0: Public Domain, per the Kaggle dataset page.
+This dataset was published as-is by NASA. You can access the original table here: https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi. More data from the Kepler mission is available from the same source here: https://exoplanetarchive.ipac.caltech.edu/docs/data.html
+
+**Findings:**
 
 According to NASA, an eclipsing binary is two stars orbiting each other, where one passes in front of the other as seen from Earth. This pattern could potentially explain the higher median for the false positive readings for object temperature and size, as well as shorter orbital periods.
 
@@ -16,7 +28,7 @@ Using this model, 377 out of 406, of the flagged candidates NASA has since resol
 
 For candidates NASA has since resolved, always guessing ‘planet’ would be right 75% of the time (442 real planets ÷ 587 resolved). The tree scores 84% ((377 + 116) ÷ 587), which is 9 percentage points higher.
 
-Limitations:
+**Limitations:**
 
 The data is taken from 2017 Kepler data snapshot so the data might be outdated.
 
@@ -26,23 +38,12 @@ Planets and false positives can have large overlaps if they are similar in sizes
 
 NASA further used additional data and research that this model does not have.
 
-Next steps:
+**Next Steps:**
 
 Include more test cases with different data columns, such as planet positioning, error rate, etc. to test if the test accuracy varies.
 
 Use random forest to see if it gives a different prediction.
 
-Sources:
-
-NASA Kepler KOI table (2017 snapshot, from Kaggle): https://www.kaggle.com/datasets/nasa/kepler-exoplanet-search-results
-NASA’s current KOI table: https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative
-Files:
-
-Kepler_Analysis.ipynb. To run it, upload cumulative.csv and nasa_now.csv.
-
-License: CC0: Public Domain, per the Kaggle dataset page.
-This dataset was published as-is by NASA. You can access the original table here: https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi. More data from the Kepler mission is available from the same source here: https://exoplanetarchive.ipac.caltech.edu/docs/data.html
-
-Acknowledgements
+**Acknowledgements:**
 
 I learned Python, pandas and scikit-learn for this project with guidance from Claude (Anthropic's AI assistant), which acted as a tutor and explained concepts, reviewed my code, answered questions, and helped me interpret the results. I wrote the code and made certain modelling decisions, such as features to train the model on, tree depth, validation against NASA’s current data, and wrote the findings.
