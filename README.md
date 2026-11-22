@@ -40,6 +40,9 @@ Files:
 
 Kepler_Analysis.ipynb. To run it, upload cumulative.csv and nasa_now.csv.
 
+License: CC0: Public Domain, per the Kaggle dataset page.
+This dataset was published as-is by NASA. You can access the original table here: https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi. More data from the Kepler mission is available from the same source here: https://exoplanetarchive.ipac.caltech.edu/docs/data.html
+
 Acknowledgements
 
 I learned Python, pandas and scikit-learn for this project with guidance from Claude (Anthropic's AI assistant), which acted as a tutor and explained concepts, reviewed my code, answered questions, and helped me interpret the results. I wrote the code and made certain modelling decisions, such as features to train the model on, tree depth, validation against NASA’s current data, and wrote the findings.
